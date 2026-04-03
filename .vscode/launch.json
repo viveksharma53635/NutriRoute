@@ -1,0 +1,13 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "NutriRoute Backend",
+      "request": "launch",
+      "mainClass": "com.learn.NutriRoute.NutriRouteApplication",
+      "projectName": "NutriRoute",
+      "cwd": "${workspaceFolder}/backend/NutriRoute"
+    }
+  ]
+}

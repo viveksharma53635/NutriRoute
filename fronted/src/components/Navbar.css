@@ -1,0 +1,247 @@
+/* Navbar.css - Modern glassmorphism styling for NutriRoute navbar */
+
+/* Glassmorphism navbar base styles */
+.navbar-glass {
+  background: rgba(255, 255, 255, 0.85) !important;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.navbar-glass:hover {
+  background: rgba(255, 255, 255, 0.95) !important;
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.08);
+}
+
+/* Brand styling */
+.navbar-brand {
+  color: #2d6a4f !important;
+  font-weight: 700;
+  font-size: 1.5rem;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-brand:hover {
+  color: #1b5e3f !important;
+  transform: translateY(-1px);
+}
+
+.navbar-brand i {
+  font-size: 1.8rem;
+  margin-right: 0.5rem;
+}
+
+/* Navigation links */
+.navbar-nav .nav-link {
+  color: #495057 !important;
+  font-weight: 500;
+  padding: 0.5rem 1rem !important;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #2d6a4f !important;
+  background: rgba(45, 106, 79, 0.1);
+  transform: translateY(-1px);
+}
+
+.navbar-nav .nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: #2d6a4f;
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.navbar-nav .nav-link:hover::after {
+  width: 80%;
+}
+
+/* Profile avatar */
+.profile-avatar {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border: 2px solid #2d6a4f;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.profile-avatar-initial {
+  background: #2d6a4f;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.profile-avatar:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(45, 106, 79, 0.3);
+}
+
+/* Custom dropdown styling */
+.dropdown-menu-custom {
+  background: rgba(255, 255, 255, 0.95) !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 0.75rem;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+  padding: 0.5rem;
+  min-width: 180px;
+  animation: dropdownFadeIn 0.3s ease;
+}
+
+@keyframes dropdownFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.dropdown-item-custom {
+  color: #495057;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  transition: all 0.2s ease;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.dropdown-item-custom:hover {
+  background: rgba(45, 106, 79, 0.1);
+  color: #2d6a4f;
+  transform: translateX(2px);
+}
+
+.dropdown-item-custom i {
+  font-size: 1rem;
+  width: 20px;
+}
+
+/* Login button styling */
+.btn-login {
+  background: transparent;
+  border: 2px solid #2d6a4f;
+  color: #2d6a4f;
+  font-weight: 600;
+  padding: 0.5rem 1.5rem;
+  border-radius: 2rem;
+  transition: all 0.3s ease;
+}
+
+.btn-login:hover {
+  background: #2d6a4f;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(45, 106, 79, 0.3);
+}
+
+/* Calories badge styling */
+.calories-badge {
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(45, 106, 79, 0.2);
+  border-radius: 2rem;
+  padding: 0.4rem 1rem;
+  font-size: 0.875rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.calories-badge:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 15px rgba(45, 106, 79, 0.15);
+}
+
+.calories-badge .calories-value {
+  color: #2d6a4f;
+  font-weight: 700;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .navbar-glass {
+    background: rgba(255, 255, 255, 0.95) !important;
+  }
+  
+  .navbar-nav .nav-link {
+    padding: 0.75rem 1rem !important;
+    margin: 0.25rem 0;
+  }
+  
+  .navbar-nav .nav-link:hover {
+    background: rgba(45, 106, 79, 0.1);
+  }
+  
+  .dropdown-menu-custom {
+    margin-top: 0.5rem;
+    right: 0 !important;
+    left: auto !important;
+  }
+}
+
+/* Navbar toggler styling */
+.navbar-toggler {
+  border: 1px solid rgba(45, 106, 79, 0.3);
+  padding: 0.25rem 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.navbar-toggler:hover {
+  border-color: #2d6a4f;
+  background: rgba(45, 106, 79, 0.05);
+}
+
+.navbar-toggler:focus {
+  box-shadow: 0 0 0 0.25rem rgba(45, 106, 79, 0.25);
+  border-color: #2d6a4f;
+}
+
+/* Custom scrollbar for dropdown */
+.dropdown-menu-custom::-webkit-scrollbar {
+  width: 6px;
+}
+
+.dropdown-menu-custom::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 3px;
+}
+
+.dropdown-menu-custom::-webkit-scrollbar-thumb {
+  background: rgba(45, 106, 79, 0.3);
+  border-radius: 3px;
+}
+
+.dropdown-menu-custom::-webkit-scrollbar-thumb:hover {
+  background: rgba(45, 106, 79, 0.5);
+}
+
+/* Active state for navigation */
+.navbar-nav .nav-link.active {
+  color: #2d6a4f !important;
+  background: rgba(45, 106, 79, 0.1);
+}
+
+.navbar-nav .nav-link.active::after {
+  width: 80%;
+}

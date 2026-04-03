@@ -1,0 +1,368 @@
+/* TrackProgress.css */
+
+/* Meal tracking specific styles */
+.meal-log-item {
+  transition: all 0.2s ease;
+}
+
+.meal-log-item:hover {
+  transform: translateX(2px);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.meal-type-header {
+  border-left: 4px solid;
+  transition: all 0.3s ease;
+}
+
+.meal-type-header.breakfast {
+  border-left-color: #ffc107;
+}
+
+.meal-type-header.lunch {
+  border-left-color: #28a745;
+}
+
+.meal-type-header.dinner {
+  border-left-color: #007bff;
+}
+
+.meal-type-header.snack {
+  border-left-color: #17a2b8;
+}
+
+/* Nutrition badges */
+.nutrition-badge {
+  font-size: 0.75rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.375rem;
+}
+
+/* Progress bars for meal tracking */
+.calorie-progress {
+  height: 8px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.calorie-progress .progress-bar {
+  transition: width 0.6s ease;
+}
+
+/* Modal styles for add meal */
+.food-search-results {
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.food-item-card {
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.food-item-card:hover {
+  background-color: #f8f9fa;
+  transform: translateY(-1px);
+}
+
+/* Weekly progress table */
+.weekly-progress-table {
+  font-size: 0.875rem;
+}
+
+.weekly-progress-table .progress {
+  height: 6px;
+}
+
+/* Meal type indicators */
+.meal-indicator {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 4px;
+}
+
+.meal-indicator.breakfast {
+  background-color: #ffc107;
+}
+
+.meal-indicator.lunch {
+  background-color: #28a745;
+}
+
+.meal-indicator.dinner {
+  background-color: #007bff;
+}
+
+.meal-indicator.snack {
+  background-color: #17a2b8;
+}
+
+/* Daily summary card */
+.daily-summary-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.daily-summary-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #28a745, #ffc107, #007bff, #17a2b8);
+}
+
+/* Calorie status colors */
+.calorie-status-low {
+  color: #856404;
+  background-color: #fff3cd;
+}
+
+.calorie-status-over {
+  color: #721c24;
+  background-color: #f8d7da;
+}
+
+.calorie-status-on-track {
+  color: #155724;
+  background-color: #d4edda;
+}
+
+/* Meal log list styles */
+.meal-log-list {
+  max-height: 600px;
+  overflow-y: auto;
+}
+
+.meal-log-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.meal-log-list::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 3px;
+}
+
+.meal-log-list::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 3px;
+}
+
+.meal-log-list::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+/* Edit mode styles */
+.meal-edit-form {
+  background-color: #f8f9fa;
+  border-radius: 0.375rem;
+  padding: 1rem;
+  border: 1px solid #dee2e6;
+}
+
+/* Food search loading */
+.search-loading {
+  position: relative;
+}
+
+.search-loading::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 16px;
+  border: 2px solid #f3f3f3;
+  border-top: 2px solid #3498db;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: translateY(-50%) rotate(0deg); }
+  100% { transform: translateY(-50%) rotate(360deg); }
+}
+
+/* Weekly stats cards */
+.weekly-stat-card {
+  transition: transform 0.2s ease;
+}
+
+.weekly-stat-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Goal achievement indicator */
+.goal-achieved {
+  position: relative;
+}
+
+.goal-achieved::before {
+  content: '✓';
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background: #28a745;
+  color: white;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+/* Nutrition pie chart styles */
+.nutrition-chart {
+  max-width: 150px;
+  margin: 0 auto;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .meal-type-header {
+    padding: 0.75rem;
+  }
+  
+  .nutrition-badge {
+    font-size: 0.7rem;
+    padding: 0.2rem 0.4rem;
+  }
+  
+  .weekly-progress-table {
+    font-size: 0.8rem;
+  }
+  
+  .weekly-progress-table .progress {
+    width: 60px;
+  }
+}
+
+/* Animation classes */
+.fade-in-meal {
+  animation: fadeInMeal 0.3s ease-in;
+}
+
+@keyframes fadeInMeal {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.slide-in-summary {
+  animation: slideInSummary 0.4s ease-out;
+}
+
+@keyframes slideInSummary {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Empty state styles */
+.empty-state {
+  padding: 3rem 1rem;
+  text-align: center;
+  color: #6c757d;
+}
+
+.empty-state i {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  opacity: 0.5;
+}
+
+/* Quick action buttons */
+.quick-action-btn {
+  transition: all 0.2s ease;
+  border: 1px solid transparent;
+}
+
+.quick-action-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Tab navigation enhancements */
+.meal-tabs .nav-link {
+  border-radius: 0.375rem 0.375rem 0 0;
+  transition: all 0.3s ease;
+}
+
+.meal-tabs .nav-link.active {
+  font-weight: 600;
+  background-color: #28a745;
+  border-color: #28a745;
+  color: white;
+}
+
+.meal-tabs .nav-link:hover:not(.active) {
+  background-color: #f8f9fa;
+}
+
+/* Modal backdrop */
+.modal-backdrop-custom {
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(2px);
+}
+
+/* Form validation styles */
+.meal-form .form-control.is-invalid {
+  border-color: #dc3545;
+  background-image: none;
+}
+
+.meal-form .form-control.is-valid {
+  border-color: #28a745;
+  background-image: none;
+}
+
+/* Loading states */
+.loading-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  border-radius: 0.375rem;
+}
+
+/* Success message styles */
+.success-message {
+  background: linear-gradient(135deg, #28a745, #20c997);
+  color: white;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Error message styles */
+.error-message {
+  background: linear-gradient(135deg, #dc3545, #fd7e14);
+  color: white;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+}

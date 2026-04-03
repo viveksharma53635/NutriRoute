@@ -1,0 +1,138 @@
+/* Background */
+
+body {
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  overflow-x: hidden; /* Prevents horizontal scrolling */
+  width: 100%;
+}
+
+/* Center container */
+
+.container {
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Card Styling */
+
+.card {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(15px);
+  border-radius: 20px !important;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+/* Title */
+
+h2 {
+  letter-spacing: 1px;
+  color: #00e676 !important;
+}
+
+/* Step Indicator */
+
+.badge {
+  padding: 10px 14px;
+  font-size: 0.85rem;
+  transition: all 0.3s ease;
+}
+
+.badge.bg-success {
+  background: linear-gradient(45deg,#00c853,#69f0ae);
+  box-shadow: 0 0 10px rgba(0,200,83,0.6);
+}
+
+.badge.bg-secondary {
+  background: rgba(255,255,255,0.2);
+}
+
+/* Inputs */
+
+.form-control,
+.form-select {
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.3);
+  background: rgba(255,255,255,0.8);
+  transition: all 0.25s ease;
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: #00e676;
+  box-shadow: 0 0 10px rgba(0,230,118,0.4);
+  transform: scale(1.02);
+}
+
+/* Labels */
+
+.form-label {
+  font-weight: 500;
+  color: #2c3e50;
+}
+
+/* Buttons */
+
+.btn-success {
+  border-radius: 10px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  background: linear-gradient(45deg,#00c853,#69f0ae);
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.btn-success:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(0,200,83,0.4);
+}
+
+.btn-outline-secondary {
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-secondary:hover {
+  background: #2c3e50;
+  color: white;
+}
+
+/* Error */
+
+.invalid-feedback {
+  font-size: 0.85rem;
+}
+
+/* Animations */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile responsive */
+
+@media (max-width: 576px) {
+
+  .card {
+    padding: 25px !important;
+  }
+
+  .badge {
+    font-size: 0.7rem;
+    padding: 6px 10px;
+  }
+
+}

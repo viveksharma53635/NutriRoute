@@ -1,0 +1,9 @@
+:root {
+  --forest: #1c3829;
+  --sage: #3d6b4f;
+  --mint: #5a9e72;
+}
+
+body {  
+  background: var(--forest);
+}

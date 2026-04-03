@@ -1,0 +1,9 @@
+/* App.css */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #f8f9fa; /* A light grey makes the glass effect pop */
+  padding-top: 20px; /* Optional spacing if needed */
+}

@@ -1,0 +1,28 @@
+.diet-planner-page {
+  min-height: calc(100vh - 80px);
+  background: #f8faf8;
+}
+
+.planner-select {
+  max-width: 360px;
+}
+
+.meal-plan-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.meal-plan-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 22px rgba(25, 135, 84, 0.12);
+}
+
+.meal-icon {
+  width: 34px;
+  height: 34px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(25, 135, 84, 0.12);
+  color: #198754;
+}
